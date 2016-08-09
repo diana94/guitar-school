@@ -117,5 +117,28 @@ nav li {
 nav li.__active {
   color: #ab987a;
 }
+.hero {
+  background: url('../i/hero.jpg') no-repeat;
+  background-size: cover;
+  height: calc(100vh - 160px);
+  position: relative;
+}
+.hero-title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: right;
+}
+.hero-subtitle {
+  font-weight: 100;
+  margin: 0;
+}
+.hero .content {
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+  left: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
