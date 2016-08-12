@@ -19,6 +19,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-carret:before {
+  content: "\e900";
+}
+.icon-camera:before {
+  content: "\f03d";
+}
+.icon-file:before {
+  content: "\f0f6";
+}
+.icon-microphone:before {
+  content: "\f130";
+}
 .icon-phone:before {
   content: "\e942";
 }
@@ -37,11 +49,39 @@
 .icon-skype:before {
   content: "\eac5";
 }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.hideme {
+  opacity: 0;
+}
+.content {
+  max-width: 1200px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
 header {
   background: #fff;
-  height: 100px;
   box-sizing: border-box;
-  padding: 22px 0;
+  padding: 18px 0;
 }
 header .logo {
   float: left;
@@ -76,26 +116,6 @@ header .contact [class*=" icon-"] {
   color: #032f3e;
   font-size: 18px;
 }
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-.content {
-  max-width: 1200px;
-  margin: auto;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-}
 nav {
   box-sizing: border-box;
   background: #032f3e;
@@ -105,23 +125,103 @@ nav ul {
 }
 nav li {
   width: 16%;
+  height: 60px;
   text-align: center;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px;
-  padding: 20px 0;
   display: inline-block;
   vertical-align: middle;
+  overflow: hidden;
 }
-nav li.__active {
+nav li:hover a {
+  margin-top: 60px;
+}
+nav li a {
+  display: inline-block;
+  position: relative;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+nav li a.__home:before {
+  content: "Home";
+}
+nav li a.__about:before {
+  content: "About us";
+}
+nav li a.__lesson:before {
+  content: "Lessons";
+}
+nav li a.__portfolio:before {
+  content: "Portfolio";
+}
+nav li a.__blog:before {
+  content: "Blog";
+}
+nav li a.__contact:before {
+  content: "Contact";
+}
+nav li a:before {
+  position: absolute;
   color: #ab987a;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 20px 0;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+}
+nav li.__active a {
+  margin-top: 60px;
 }
 .hero {
   background: url('../i/hero.jpg') no-repeat;
   background-size: cover;
   height: calc(100vh - 160px);
   position: relative;
+  box-sizing: border-box;
+  border-bottom: 4px solid #fff;
+  overflow: hidden;
+}
+.hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.hero-move-btn {
+  position: absolute;
+  bottom: -120px;
+  right: 50%;
+  margin-right: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.hero-move-btn:hover .icon-carret {
+  -webkit-animation: move-carret 0.5s infinite linear;
+          animation: move-carret 0.5s infinite linear;
+}
+.hero-move-btn .icon-carret {
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 8px;
+  font-size: 30px;
+  color: #1e0a0b;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 .hero-title {
   font-size: 70px;
@@ -129,6 +229,37 @@ nav li.__active {
   color: #fff;
   text-transform: uppercase;
   text-align: right;
+  margin-right: 15px;
+}
+.hero-video-wr {
+  float: right;
+  margin-right: 15px;
+  position: relative;
+}
+.hero-video-link {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 150px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+.hero-video-link span {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  line-height: 0.6;
 }
 .hero-subtitle {
   font-weight: 100;
@@ -137,8 +268,81 @@ nav li.__active {
 .hero .content {
   position: absolute;
   right: 0;
-  bottom: 200px;
+  bottom: 50px;
   left: 0;
+}
+.services {
+  padding-top: 24px;
+}
+.services-title {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  color: #032f3e;
+  text-align: center;
+  position: relative;
+  margin-bottom: 75px;
+}
+.services-title:before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  border: 1px solid #ab987a;
+  bottom: -36px;
+  left: 50%;
+  margin-left: -18px;
+}
+.services-dscr {
+  margin-bottom: 150px;
+}
+.services-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  margin: auto;
+  text-align: center;
+  color: #032f3e;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.services-item [class*='icon-'] {
+  font-size: 70px;
+  color: #ab987a;
+  border: 1px solid #ab987a;
+  border-radius: 50%;
+  display: block;
+  height: 170px;
+  width: 170px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.services-item [class*='icon-']:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -35px;
+}
+@-webkit-keyframes move-carret {
+  50% {
+    top: 13px;
+    left: 15px;
+  }
+  100% {
+    top: 6px;
+    left: 8px;
+  }
+}
+@keyframes move-carret {
+  50% {
+    top: 13px;
+    left: 15px;
+  }
+  100% {
+    top: 6px;
+    left: 8px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

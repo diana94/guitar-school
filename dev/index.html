@@ -13,7 +13,7 @@
 
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
         <script src="js/jquery.fullpage.js"></script>
         <script src="js/script.js"></script>
     </head>
@@ -41,12 +41,12 @@
                 <nav>
                     <div class="content">
                         <ul>
-                            <li class="__active"><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Lessons</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="__active"><a href="#" class="__home">Home</a></li>
+                            <li><a href="#" class="__about">About us</a></li>
+                            <li><a href="#" class="__lesson">Lessons</a></li>
+                            <li><a href="#" class="__portfolio">Portfolio</a></li>
+                            <li><a href="#" class="__blog">Blog</a></li>
+                            <li><a href="#" class="__contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -54,11 +54,39 @@
                 <section class="hero">
                     <div class="content">
                         <h1 class="hero-title">Check our video<p class="hero-subtitle">Learning in 6 weeks</p></h1>
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k"> </iframe>
+                        <div class="hero-video-wr">
+                            <video class="hero-video" width="270" height="170" autoplay="autoplay" muted loop>
+                                <source src="video/guitar.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                Элемент video не поддерживается вашим браузером.
+                            </video>
+                            <a href="#" class="hero-video-link"><span>&#8227;</span></a>
+                        </div>
+                        <button class="hero-move-btn" id="hero-change-slide"><i class="icon-carret"></i></button>
                     </div>
                 </section>
             </div>
-            <div class="section">qweqwe</div>
+            <div class="section">
+                <section class="services">
+                    <div class="content">
+                        <h3 class="services-title">Services</h3>
+                        <p class="services-dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                        <div class="services-collection hideme">
+                            <div class="services-item">
+                                <i class="icon-microphone"></i>
+                                <p>Recording services</p>
+                            </div>
+                            <div class="services-item">
+                                <i class="icon-file"></i>
+                                <p>You get the certificate</p>
+                            </div>
+                            <div class="services-item">
+                                <i class="icon-camera"></i>
+                                <p>All lessons are via skype</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div class="section">qweqw</div>
             <div class="section">qweqw</div>
             <div class="section">
