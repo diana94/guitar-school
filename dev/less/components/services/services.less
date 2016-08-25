@@ -1,32 +1,21 @@
 .services {
     padding-top: 24px;
-    &-title {
-        text-transform: uppercase;
-        font-size: 26px;
-        font-weight: bold;
-        color: #032f3e;
-        text-align: center;
-        position: relative;
-        margin-bottom: 75px;
+    height: calc(100vh);
+    width: 100%;
+    box-sizing: border-box;
+    background: url('../i/projects.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 
-        &:before {
-            content: '';
-            position: absolute;
-            width: 36px;
-            border: 1px solid #ab987a;
-            bottom: -36px;
-            left: 50%;
-            margin-left: -18px;
-        }
-    }
-
-    &-dscr {
-        margin-bottom: 150px;
-    }
-
-    &-collections {
-        // width: 99%;
-        // margin: auto;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
     }
 
     &-item {
@@ -38,6 +27,32 @@
         color: #032f3e;
         text-transform: uppercase;
         font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease-out;
+
+        .hideme & { transform: scale(0); }
+
+        .hideme.showing & { transform: scale(1); }
+
+        &.__record { transition-delay: 0.3s; }
+        &.__certification { transition-delay: 0.6s; }
+        &.__skype { transition-delay: 0.9s; }
+
+        &_dscr {
+            width: 170px;
+            margin: auto;
+            line-height: 1.8;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 36px;
+                border: 1px solid #ab987a;
+                bottom: -36px;
+                left: 50%;
+                margin-left: -18px;
+            }
+         }
 
         [class*='icon-'] {
             font-size: 70px;
@@ -47,9 +62,13 @@
             display: block;
             height: 170px;
             width: 170px;
-            margin: auto;
+            margin: 0 auto 30px;
             text-align: center;
             position: relative;
+
+            &:hover {
+                &:before { transform: rotateY(360deg); }
+            }
 
             &:before {
                 position: absolute;
@@ -57,7 +76,12 @@
                 left: 0;
                 right: 0;
                 margin-top: -35px;
+                transition: all 0.3s ease-out;
             }
         }
     }
+
+    .common-dscr { margin-bottom: 150px; }
+
+    .content { position: relative; }
 }

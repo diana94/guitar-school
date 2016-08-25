@@ -1,0 +1,46 @@
+.map {
+    background: rgba(171, 152, 122, 0.84);
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 24px;
+
+    .google-map {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        margin-right: 10%;
+        height: 66vh;
+        top: 50%;
+        margin-top: -33vh;
+        border: 1px solid #ab987a;
+        border-radius: 10%;
+        z-index: 999;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .common-title-light{
+        color: #fff;
+
+        &:before { border-bottom-color: #fff; }
+    }
+
+    .addr {
+        font-size: 16px;
+        color: #254b58;
+        margin: 5px;
+        font-weight: normal;
+
+        &-wr {
+            display: inline-block;
+            font-size: 16px;
+            color: #254b58;
+        }
+
+        &-i {
+            display: inline-block;
+            margin-right: 15px;
+        }
+    }
+}

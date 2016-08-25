@@ -1,3 +1,10 @@
+@keyframes move-location {
+    0% { transform: rotate(-45deg); }
+    25% { transform: rotate(-30deg); }
+    75% { transform: rotate(-60deg); }
+    100% { transform: rotate(-45deg); }
+}
+
 @keyframes move-carret {
   50% {
         top: 13px;
@@ -7,4 +14,30 @@
         top: 6px;
         left: 8px;
     }
+}
+
+@keyframes  change-big-folder-i {
+    0% { top: 0; }
+
+    25% { top: -370px; }
+
+    50% { top: -370px * 2; }
+
+    75% { top: -370px; }
+
+    100% { top: 0; }
+
+}
+
+@keyframes  change-small-folder-i {
+    0% { top: 0; }
+
+    25% { top: -180px; }
+
+    50% { top: -180px * 2; }
+
+    75% { top: -180px; }
+
+    100% { top: 0; }
+
 }

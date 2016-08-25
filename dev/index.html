@@ -7,14 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Guitar school</title>
         <link rel="stylesheet" media="all" href="icomoon/icomoon.css">
-        <link rel="stylesheet" media="all" href="css/jquery.fullpage.css">
-        <link rel="stylesheet" media="all" href="css/normalize.css">
+        <link rel="stylesheet" media="all" href="js/jquery.fullpage/jquery.fullpage.css">
+        <link rel="stylesheet" media="all" href="js/owl.carousel/owl.carousel.css">
+        <link rel="stylesheet" media="all" href="style/normalize.css">
         <link rel="stylesheet" media="all" href="style/style.css">
 
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
         <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-        <script src="js/jquery.fullpage.js"></script>
+        <script src="js/jquery.fullpage/jquery.fullpage.js"></script>
+        <script src="js/owl.carousel/owl.carousel.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script src="js/script.js"></script>
     </head>
 
@@ -53,7 +56,7 @@
 
                 <section class="hero">
                     <div class="content">
-                        <h1 class="hero-title">Check our video<p class="hero-subtitle">Learning in 6 weeks</p></h1>
+                        <h1 class="common-title-hard">Check our video<p class="common-subtitle">Learning in 6 weeks</p></h1>
                         <div class="hero-video-wr">
                             <video class="hero-video" width="270" height="170" autoplay="autoplay" muted loop>
                                 <source src="video/guitar.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -61,38 +64,227 @@
                             </video>
                             <a href="#" class="hero-video-link"><span>&#8227;</span></a>
                         </div>
-                        <button class="hero-move-btn" id="hero-change-slide"><i class="icon-carret"></i></button>
+                        <button class="common-move-btn"><i class="icon-carret"></i></button>
                     </div>
                 </section>
             </div>
             <div class="section">
                 <section class="services">
                     <div class="content">
-                        <h3 class="services-title">Services</h3>
-                        <p class="services-dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                        <h3 class="common-title-light">Services</h3>
+                        <p class="common-dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
                         <div class="services-collection hideme">
-                            <div class="services-item">
+                            <div class="services-item __record">
                                 <i class="icon-microphone"></i>
-                                <p>Recording services</p>
+                                <p class="services-item_dscr">Recording services</p>
                             </div>
-                            <div class="services-item">
+                            <div class="services-item __certification">
                                 <i class="icon-file"></i>
-                                <p>You get the certificate</p>
+                                <p class="services-item_dscr">You get the certificate</p>
                             </div>
-                            <div class="services-item">
+                            <div class="services-item __skype">
                                 <i class="icon-camera"></i>
-                                <p>All lessons are via skype</p>
+                                <p class="services-item_dscr">All lessons are via skype</p>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="section">qweqw</div>
-            <div class="section">qweqw</div>
+            <div class="section">
+                <section class="lessons">
+                    <div class="content">
+                        <h3 class="common-title-hard">
+                            Our lessons
+                            <p class="common-subtitle">Are easy</p>
+                        </h3>
+
+                        <div class="lessons-item __stack">
+                            <i class="icon-stack"></i>
+                            <p class="lessons-item_dscr">Lorem ipsum dolors sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="lessons-item __earth">
+                            <i class="icon-earth"></i>
+                            <p class="lessons-item_dscr">Lorem ipsum dolors sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="lessons-item __rocket">
+                            <i class="icon-rocket"></i>
+                            <p class="lessons-item_dscr">Lorem ipsum dolors sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="lessons-item __speaker">
+                            <i class="icon-speaker"></i>
+                            <p class="lessons-item_dscr">Lorem ipsum dolors sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="section">
+                <section class="projects">
+                    <div class="content">
+                        <h3 class="common-title-light">Our projects</h3>
+                        <p class="common-dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                        <div data-name="Music" class="folder __big">
+                            <ul class="folder-content">
+                                <li class="folder-content-item">
+                                    <img src="i/music-1.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/music-2.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/music-3.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="folder-wr">
+                            <div data-name="Rock" class="folder">
+                                <ul class="folder-content">
+                                <li class="folder-content-item">
+                                    <img src="i/rock-1.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/rock-2.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/rock-3.jpg" alt="">
+                                </li>
+                            </ul>
+                            </div>
+                            <div data-name="Shows" class="folder">
+                                <ul class="folder-content">
+                                    <li class="folder-content-item">
+                                        <img src="i/shows-1.jpg" alt="">
+                                    </li>
+                                    <li class="folder-content-item">
+                                        <img src="i/shows-2.png" alt="">
+                                    </li>
+                                    <li class="folder-content-item">
+                                        <img src="i/shows-3.jpg" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-name="Lessons" class="folder __big">
+                            <ul class="folder-content">
+                                <li class="folder-content-item">
+                                    <img src="i/lessons-1.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/lessons-2.jpg" alt="">
+                                </li>
+                                <li class="folder-content-item">
+                                    <img src="i/lessons-3.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="section">
+                <section class="testimonials">
+                    <div class="content">
+                        <h3 class="common-title-light">Testimonials</h3>
+                        <div id="carousel-teacher" class="carousel-teacher">
+                            <div class="teacher-item">
+                                <div class="photo-wr">
+                                    <img src="i/teacher-1.jpg" alt="">
+                                </div>
+
+                                <p class="teacher-item_dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                                <p class="teacher-item_name">Andrea Koronikova</p>
+                                <p class="teacher-item_prof">Music teacher</p>
+                            </div>
+                            <div class="teacher-item">
+                                <div class="photo-wr">
+                                    <img src="i/teacher-2.jpg" alt="">
+                                </div>
+                                <p class="teacher-item_dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                                <p class="teacher-item_name">Elena Popova</p>
+                                <p class="teacher-item_prof">Director</p>
+                            </div>
+                            <div class="teacher-item">
+                                <div class="photo-wr">
+                                    <img src="i/teacher-3.jpg" alt="">
+                                </div>
+                                <p class="teacher-item_dscr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                                <p class="teacher-item_name">Lisa Black</p>
+                                <p class="teacher-item_prof">Guitar teacher</p>
+                            </div>
+                        </div>
+
+                        <button class="common-move-btn" ><i class="icon-location"></i></button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="section">
+                <section class="map">
+                    <div class="content">
+                        <h3 class="common-title-light">Map</h3>
+                        <div id="googleMap" class="google-map"></div>
+                    </div>
+                </section>
+            </div>
+
             <div class="section">
                 <footer>
+                    <div class="content">
+                        <div class="info">
+                            <div class="info-item __about">
+                                <div class="logo">
+                                    <img src="i/logo.png" alt="" />
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit.</p>
+                                <p>Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
+                            </div>
+                            <div class="info-item __contact">
+                                <h3 class="info-title"><span>Contact</span></h3>
+                                <div class="info-contact">
+                                    <i class="icon-mail"></i>
+                                    <p class="info-contact_text">info@guitarlessons.com</p>
+                                </div>
+                                <div class="info-contact">
+                                    <i class="icon-phone"></i>
+                                    <p class="info-contact_text">012345678910</p>
+                                </div>
+                                <div class="info-contact">
+                                    <i class="icon-location"></i>
+                                    <p class="info-contact_text">Greenplatz Ben 29, Germany 60435</p>
+                                </div>
+                                <div class="info-contact">
+                                    <i class="icon-fax"></i>
+                                    <p class="info-contact_text">(0012) 654 356 445</p>
+                                </div>
+                            </div>
+                            <div class="info-item __news">
+                                <h3 class="info-title"><span>Latest news</span></h3>
 
+                                <div class="info-news">
+                                    <p class="date">02.08.2015</p>
+                                    <p class="title">Etiam tempor odio tellus.</p>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                </div>
+                                <div class="info-news">
+                                    <p class="date">02.08.2015</p>
+                                    <p class="title">Etiam tempor odio tellus.</p>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </footer>
+
+                <div class="copyright">
+                    <div class="content clearfix">
+                        <p class="copyright-text">© Copyright 2015 Guitar. All rights reserved.</p>
+                        <ul class="contact">
+                            <li><a href="#" class="icon-facebook"></a></li>
+                            <li><a href="#" class="icon-twitter"></a></li>
+                            <li><a href="#" class="icon-google"></a></li>
+                            <li><a href="#" class="icon-rss"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

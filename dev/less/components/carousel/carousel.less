@@ -1,0 +1,80 @@
+.carousel {
+    &-teacher {
+
+        .teacher {
+            &-item {
+                margin: 30px 15px;
+                text-align: center;
+
+                &_dscr {
+                    width: 800px;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    font-style: italic;
+                    color: #616161;
+                    margin:0 auto 40px;
+                }
+
+                &_name {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #032f3e;
+                    margin-bottom: 20px;
+                }
+
+                &_prof {
+                    font-size: 18px;
+                    color: #ab987a;
+                }
+            }
+        }
+
+        .photo-wr {
+            width: 170px;
+            height: 170px;
+            border: 2px solid #ab987a;
+            border-radius: 50%;
+            margin: 0 auto 40px;
+            overflow: hidden;
+
+            img { width: 170px;
+            }
+        }
+
+        .owl-controls .owl-page,
+        .owl-controls .owl-buttons div {
+            position: absolute;
+            top: 50%;
+            width: 70px;
+            height: 60px;
+            border: 3px solid #ab987a;
+            color: #ab987a;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .owl-prev:before,
+        .owl-next:before {
+            content: '\e900';
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            margin-right: -18px;
+            margin-top: -18px;
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .owl-next:before { transform: rotate(180deg); }
+
+        .owl-prev { left: -80px; }
+        .owl-next { right: -80px; }
+    }
+}
